@@ -61,7 +61,7 @@ public class LinkedLabel: UILabel {
 
             if beginRect.origin.y == endRect.origin.y {
                 beginRect.origin.x = beginPoint.x
-                beginRect.size.width = endPoint.x - beginPoint.x
+                beginRect.size.width = abs(endPoint.x - beginPoint.x)
                 if beginRect.contains(point) { return link }
             } else {
                 let rect = CGRect(x: 0, y: beginRect.maxY, width: beginRect.width, height: endRect.minY - beginRect.maxY)
